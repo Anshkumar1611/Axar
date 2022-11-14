@@ -7,10 +7,14 @@ module.exports = {
       white: "#ffffff",
       yellow: "#feb900",
       gray: "#52565e",
+      bluish:'#a1bdd1',
+      title:'#aaaaaa',
+      axar:'#ebf1fa',
     },
     fontFamily: {
       raleway: ["Raleway", "sans-serif"],
       sans: ["Open Sans", "sans-serif"],
+      Playfair:['Playfair Display','serif']
     },
   },
 

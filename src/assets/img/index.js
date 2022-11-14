@@ -6,6 +6,7 @@ const Images = {
   hero4:require("./hero-carousel/hero-carousel-4.jpg"),
   hero5:require("./hero-carousel/hero-carousel-5.jpg"),
   hero6:require("./hero-carousel/pexels-zukiman-mohamad-190417(1).jpg"),
+  about:require("./about/about-2.jpg"),
 };
 
 export default Images;

@@ -6,10 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay, Navigation,Pagination } from "swiper";
 import { EffectFade } from 'swiper';
-import "../../App.css";
-import Images from "../../assets/img";
+import "./Style.css";
+import Images from "../../../assets/img";
 
 function HeroCarousel() {
   return (
@@ -22,27 +22,28 @@ function HeroCarousel() {
           disableOnInteraction: false,
         }}
         navigation={true}
-        modules={[Autoplay, Navigation,EffectFade]}
+        pagination={false}
+        modules={[Autoplay, Navigation,EffectFade,Pagination]}
         effect='fade'
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={Images.hero6} alt="hero" className=""/>
+          <img src={Images.hero6} alt="hero" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Images.hero2} alt="hero" className=""/>
+          <img src={Images.hero2} alt="hero" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Images.hero3} alt="hero" className=""/>
+          <img src={Images.hero3} alt="hero" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Images.hero4} alt="hero" className=""/>
+          <img src={Images.hero4} alt="hero" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Images.hero5} alt="hero" className=""/>
+          <img src={Images.hero5} alt="hero" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Images.hero1} alt="hero" className=""/>
+          <img src={Images.hero1} alt="hero" />
         </SwiperSlide>
       </Swiper>
     </>
