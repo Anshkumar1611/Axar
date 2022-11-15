@@ -1,10 +1,11 @@
 import React from "react";
+import Images from "../../../assets/img";
 
 function TestimonialCard() {
   return (
     <div className="card w-full glass">
-      <figure>
-        <img src="https://placeimg.com/400/225/arch" alt="car!" />
+      <figure className="h-64">
+        <img src={Images.person1} alt="car!" className=""/>
       </figure>
       <div className="card-body">
         <h2 className="card-title">Life hack</h2>

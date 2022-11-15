@@ -2,7 +2,7 @@ import React from "react";
 import { RiHomeSmileLine } from "react-icons/ri";
 import { BsFillJournalBookmarkFill, BsAward } from "react-icons/bs";
 import { MdOutlineWatchLater } from "react-icons/md";
-import Images from "../../assets/img";
+import Images from "../../../assets/img";
 
 function About() {
   return (

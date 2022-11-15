@@ -1,6 +1,6 @@
 import React from "react";
-import ThickLine from "../common/lines/ThickLine";
-import Rounded from "../common/buttons/Rounded";
+import ThickLine from "../../common/lines/ThickLine";
+import Rounded from "../../common/buttons/Rounded";
 function HeroSection() {
   return (
     <div className="flex justify-center items-center">
