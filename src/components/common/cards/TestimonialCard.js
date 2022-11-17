@@ -4,7 +4,7 @@ import Images from "../../../assets/img";
 function TestimonialCard() {
   return (
     <div className="card w-full glass">
-      <figure className="h-64">
+      <figure className="h-48">
         <img src={Images.person1} alt="car!" className=""/>
       </figure>
       <div className="card-body">

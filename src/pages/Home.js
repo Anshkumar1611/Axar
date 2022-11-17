@@ -4,7 +4,7 @@ import HeroSection from "../components/Layouts/LandingPage/HeroSection";
 import AboutSection from "../components/Layouts/LandingPage/AboutSection";
 import WhyUsSection from "../components/Layouts/LandingPage/WhyUsSection";
 import WhatWeDo from "../components/Layouts/LandingPage/WhatWeDo";
-import Testimonial from "../components/Layouts/LandingPage/Testimonial";
+// import Testimonial from "../components/Layouts/LandingPage/Testimonial";
 import OurProjects from "../components/Layouts/LandingPage/OurProjects";
 
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
         <div className="h-screen ">
           <HeroCarousel />
         </div>
-        <div className=" w-full h-full">
+        <div className="">
           <HeroSection />
         </div>
       </div>
@@ -22,7 +22,7 @@ function Home() {
       <WhyUsSection />
       <WhatWeDo />
       <OurProjects />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </div>
   );
 }

@@ -17,11 +17,11 @@ function WhyUsSection() {
             <SubTitle text={"Why Choose Us"} />
           </div>
         </div>
-        <div className="flex flex-col lg:h-5/6 lg:flex-row">
+        <div className="flex flex-col lg:h-5/6 lg:flex-row ">
           <div className=" lg:w-5/12 h-full">
             <img src={Images.hero2} alt={Images.hero5} className='h-full'/>
           </div>
-          <div className="lg:w-7/12 h-full bg-base-300">
+          <div className="lg:w-7/12 h-full pt-8 bg-base-100">
             <WhyUs />
           </div>
         </div>
