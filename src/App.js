@@ -11,11 +11,14 @@ import Contact from "./pages/Contact";
 import Journey from "./components/Layouts/About/Journey";
 import Team from "./components/Layouts/About/Team";
 import Testimonial from "./components/Layouts/About/Testimonial";
+import SmoothScroll from './components/SmoothScroll';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <SmoothScroll>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about/journey" element={<Journey />} />
@@ -27,6 +30,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </SmoothScroll>
       <Footer />
     </BrowserRouter>
   );

@@ -14,6 +14,14 @@ const Images = {
   testimonial3:require("./testimonial/Testimonial_3.jpg"),
   testimonial4:require("./testimonial/Testimonial_4.jpg"),
   testimonial5:require("./testimonial/Testimonial_5.jpg"),
+  serviceMain:require("./service/service1.jpg"),
+  service1:require("./service/service-1.jpg"),
+  service2:require("./service/service-2.jpg"),
+  service3:require("./service/service-3.jpg"),
+  service4:require("./service/service-4.jpg"),
+  service:require("./service/service2.jpg"),
+  whyUs3:require("./whyUs/whyUs3.jpg"),
+  whyUs2:require("./whyUs/whyUs2.jpg"),
 };
 
 export default Images;

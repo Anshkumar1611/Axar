@@ -55,7 +55,7 @@ function WhyUsSection() {
         console.log(item);
         const { heading, url, description, id } = item;
         return (
-          <div className="flex flex-col lg:flex-row mb-8 drop-shadow-2xl" key={id}>
+          <div className="flex flex-col lg:flex-row mb-4 drop-shadow-2xl" key={id}>
             <PhotoDiv url={url} />
             <TextDiv heading={heading} desc={description} id={id}/>
           </div>

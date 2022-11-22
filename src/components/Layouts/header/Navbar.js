@@ -99,9 +99,9 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <a href="/" className="bg-base-100 hover:text-base-content">
+                  <Link to='/inclusion' className="bg-base-100 hover:text-base-content">
                     Inclusion
-                  </a>
+                  </Link>
                 </li>
                 <li tabIndex={0}>
                   <a
@@ -212,9 +212,9 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <a href="/" className="bg-opacity-0 hover:text-base-content">
+                <Link to='/inclusion' className="bg-opacity-0 hover:text-base-content">
                   Inclusion
-                </a>
+                </Link>
               </li>
               <li tabIndex={0}>
                 <a
