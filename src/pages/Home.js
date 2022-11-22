@@ -10,19 +10,18 @@ import OurProjects from "../components/Layouts/LandingPage/OurProjects";
 function Home() {
   return (
     <div>
-      <div className="relative">
-        <div className="h-screen ">
+      <div className="">
+        <div className="h-screen relative">
           <HeroCarousel />
-        </div>
-        <div className="">
-          <HeroSection />
+          <div className="absolute inset-y-0 top-24 w-full text-center z-10">
+            <HeroSection />
+          </div>
         </div>
       </div>
       <AboutSection />
       <WhyUsSection />
       <WhatWeDo />
       <OurProjects />
-      {/* <Testimonial /> */}
     </div>
   );
 }

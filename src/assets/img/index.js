@@ -7,9 +7,13 @@ const Images = {
   hero5:require("./hero-carousel/hero-carousel-5.jpg"),
   hero6:require("./hero-carousel/pexels-zukiman-mohamad-190417(1).jpg"),
   about:require("./about/about-2.jpg"),
-  person1:require("./testimonial/person1.jpg"),
-  person2:require("./testimonial/person2.jpg"),
-  person3:require("./testimonial/person3.jpg"),
+  testimonialHome:require("./testimonial/Testimonials.jpg"),
+  testimonialMain:require("./testimonial/Testimonial.jpg"),
+  testimonial1:require("./testimonial/Testimonial_1.jpg"),
+  testimonial2:require("./testimonial/Testimonial_2.jpg"),
+  testimonial3:require("./testimonial/Testimonial_3.jpg"),
+  testimonial4:require("./testimonial/Testimonial_4.jpg"),
+  testimonial5:require("./testimonial/Testimonial_5.jpg"),
 };
 
 export default Images;

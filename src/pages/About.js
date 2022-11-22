@@ -1,8 +1,11 @@
 import React from 'react'
+import Journey from '../components/Layouts/About/Journey'
 
 function About() {
   return (
-    <div>About</div>
+    <div>
+      <Journey/>
+    </div>
   )
 }
 

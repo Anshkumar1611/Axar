@@ -10,6 +10,7 @@ module.exports = {
       bluish:'#a1bdd1',
       title:'#aaaaaa',
       axar:'#ebf1fa',
+      journey:'#f5f6f7',
     },
     fontFamily: {
       raleway: ["Raleway", "sans-serif"],

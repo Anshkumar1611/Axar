@@ -55,11 +55,11 @@ function Projects() {
           </div>
           <div className="opacity-100 absolute inset-x-0 bottom-0 hover:opacity-100 backdrop-opacity-30 hover:backdrop-opacity-40 backdrop-invert cursor-pointer">
             <div className="flex justify-between px-5 py-5">
-              <p className="font-semibold text-white  flex flex-col">
+              <div className="font-semibold text-white  flex flex-col">
                 <p>{item.name}</p>
                 <p>Location : {item.location}</p>
                 <p>Cost : {item.cost}</p>
-              </p>
+              </div>
               <div className="text-5xl py-5 text-white">
                 <BiBuildingHouse />
               </div>

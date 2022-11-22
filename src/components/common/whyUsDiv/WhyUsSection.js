@@ -48,19 +48,16 @@ const data = [
       "It's time for your dream home to become a reality! AXAR Luxury Homes is a 'True' custom home builder, with 100% transparency *no hidden fees*.",
   },
 ];
-function WhyUs() {
+function WhyUsSection() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 ">
       {data.map((item) => {
         console.log(item);
-       const {heading,url,description,id} = item
+        const { heading, url, description, id } = item;
         return (
-          <div
-            className="flex flex-col lg:flex-row gap-10"
-            key={id}
-          >
-            <PhotoDiv url={url}/>
-            <TextDiv heading={heading} desc={description}/>
+          <div className="flex flex-col lg:flex-row mb-8 drop-shadow-2xl" key={id}>
+            <PhotoDiv url={url} />
+            <TextDiv heading={heading} desc={description} id={id}/>
           </div>
         );
       })}
@@ -68,4 +65,4 @@ function WhyUs() {
   );
 }
 
-export default WhyUs;
+export default WhyUsSection;

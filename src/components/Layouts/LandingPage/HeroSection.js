@@ -1,10 +1,10 @@
 import React from "react";
 import ThickLine from "../../common/lines/ThickLine";
-import Rounded from "../../common/buttons/Rounded";
+import Main from "../../common/buttons/Main";
 function HeroSection() {
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col items-center justify-center gap-6 px-6 w-4/6 lg:w-2/6 lg:h-96 backdrop-opacity-10 backdrop-invert">
+    <div className="flex justify-center items-center ">
+      <div className="flex flex-col items-center justify-center gap-6 p-6 w-4/6 lg:w-2/6 lg:h-96 backdrop-opacity-20 backdrop-invert">
         <div>
           <p className="text-primary font-Playfair font-bold text-3xl lg:text-5xl text-center">
             Welcome to AXAR Luxury Homes
@@ -21,7 +21,7 @@ function HeroSection() {
           </p>
         </div>
         <div>
-          <Rounded text={"Get Started"} />
+          <Main text={"Get Started"} />
         </div>
       </div>
     </div>

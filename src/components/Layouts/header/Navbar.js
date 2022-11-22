@@ -44,13 +44,13 @@ function Navbar() {
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 text-primary bg-base-100"
               >
                 <li>
-                  <a href="/" className="bg-base-100 hover:text-base-content">
+                  <Link to='/' className="bg-base-100 hover:text-base-content">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li tabIndex={0}>
-                  <a
-                    href="/"
+                  <Link to='/'
+                    
                     className="bg-base-100 justify-between hover:text-base-content"
                   >
                     About Us
@@ -63,43 +63,40 @@ function Navbar() {
                     >
                       <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                     </svg>
-                  </a>
+                  </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <a
-                        href="/"
+                      <Link to='/about/journey'
                         className="bg-base-100 hover:text-base-content"
                       >
                         Journey
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link to='/about/team'
                         className="bg-base-100 hover:text-base-content"
                       >
                         Team
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link to='/about/testimonial'
                         className="bg-base-100 hover:text-base-content"
                       >
                         Testimonials
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="/" className="bg-base-100 hover:text-base-content">
+                  <Link to='/whyUs'  className="bg-base-100 hover:text-base-content">
                     Why Choose Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/" className="bg-base-100 hover:text-base-content">
+                  <Link to='/services' className="bg-base-100 hover:text-base-content">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/" className="bg-base-100 hover:text-base-content">
@@ -161,13 +158,12 @@ function Navbar() {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0 text-primary ">
               <li>
-                <a href="/" className="bg-opacity-0 hover:text-base-content">
+                <Link to='/' className="bg-opacity-0 hover:text-base-content">
                   Home
-                </a>
+                </Link>
               </li>
               <li tabIndex={0}>
-                <a
-                  href="/"
+                <Link to='/'
                   className="justify-between hover:text-base-content bg-opacity-0"
                 >
                   About Us
@@ -180,43 +176,40 @@ function Navbar() {
                   >
                     <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                   </svg>
-                </a>
+                </Link>
                 <ul className="p-2 bg-base-100">
                   <li>
-                    <a
-                      href="/"
+                    <Link to='/about/journey'
                       className="bg-opacity-0 hover:text-base-content"
                     >
                       Journey
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
+                    <Link to='/about/team'
                       className="bg-opacity-0 hover:text-base-content"
                     >
                       Team
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
+                    <Link to='/about/testimonial'
                       className="bg-opacity-0 hover:text-base-content"
                     >
                       Testimonials
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="/" className="bg-opacity-0 hover:text-base-content ">
+                <Link to='/whyUs'  className="bg-opacity-0 hover:text-base-content ">
                   Why Choose Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="bg-opacity-0 hover:text-base-content">
+                <Link to='/services' className="bg-opacity-0 hover:text-base-content">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/" className="bg-opacity-0 hover:text-base-content">
