@@ -6,12 +6,14 @@ import Home from "./pages/Home";
 import WhyUs from "./pages/WhyUs";
 import Services from "./pages/Services";
 import Inclusion from "./pages/Inclusion";
-import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import Journey from "./components/Layouts/About/Journey";
-import Team from "./components/Layouts/About/Team";
-import Testimonial from "./components/Layouts/About/Testimonial";
+import Journey from "./pages/About/Journey";
+import Team from "./pages/About/Team";
+import Testimonial from "./pages/About/Testimonial";
 import SmoothScroll from './components/SmoothScroll';
+import Videos from "./pages/Gallery/Videos";
+import Designs from "./pages/Gallery/Designs";
+import GalleryImages from "./pages/Gallery/GalleryImages";
 
 
 function App() {
@@ -27,7 +29,9 @@ function App() {
         <Route path="/whyUs" element={<WhyUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/inclusion" element={<Inclusion />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/images" element={<GalleryImages />} />
+        <Route path="/gallery/videos" element={<Videos />} />
+        <Route path="/gallery/designs" element={<Designs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       </SmoothScroll>

@@ -1,9 +1,7 @@
 import React from "react";
-import Images from "../../../assets/img";
-import TestimonialCard from "../../common/cards/TestimonialCard";
-import ThickLine from "../../common/lines/ThickLine";
-import SubTitle from "../../common/SubTitle";
-import Title from "../../common/Title";
+import Images from "../../assets/img";
+import TestimonialCard from "../../components/common/cards/TestimonialCard";
+import Hero from "../../components/common/Hero";
 
 const data = [
   {
@@ -56,47 +54,16 @@ const data = [
 function Testimonial() {
   return (
     <div className="">
-      <div className="w-full h-full">
-        <img
-          src={Images.testimonialHome}
-          alt="testimonial"
-          className="w-full h-full"
-        />
-      </div>
-      <div className=" px-4 lg:px-28 bg-white py-14">
-        <div className="flex flex-col gap-4 ">
-          <div>
-            <Title text={"Testimonials"} />
-          </div>
-          <div>
-            <SubTitle text={"Our Clients Testimonials"} />
-          </div>
-        </div>
-        <div className="flex md:gap-10 pt-4">
-          <div className="basis-2/3">
-            <ThickLine />
-            <p className="text-black pt-4 ">
-              "Our most important goal is to make our clients happy. To do this,
-              we listen to your concerns, challenges, and goals and focus our
-              efforts to ensure that we deliver a quality building, on time and
-              on budget that takes into consideration your most important
-              objectives."
-              <br />
-              <br /> We are proud of our reputation as an honest, ethical
-              general contractor that provides exceptional service and build
-              quality. We invite you to review some of the comments from our
-              many satisfied clients.
-            </p>
-          </div>
-          <div className="flex-1 lg:-mt-20">
-            <img
-              src={Images.testimonialMain}
-              alt="testimonial"
-              className="rounded-full"
-            />
-          </div>
-        </div>
-      </div>
+      <Hero
+        homeImage={Images.testimonialHome}
+        image={Images.testimonialMain}
+        title={"testimonials"}
+        subTitle={"Our Clients Testimonials"}
+        description1={"Our most important goal is to make our clients happy. To do this,we listen to your concerns, challenges, and goals and focus our efforts to ensure that we deliver a quality building, on time and on budget that takes into consideration your most important objectives."}
+        description2={
+          "We are proud of our reputation as an honest, ethical  general contractor that provides exceptional service and build quality. We invite you to review some of the comments from our many satisfied clients."
+        }
+      />
       <div className="bg-yellow p-14 flex flex-col gap-10 items-center justify-center ">
         {data.map((item) => {
           return <TestimonialCard key={item.id} item={item} />;

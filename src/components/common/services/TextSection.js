@@ -1,15 +1,14 @@
 import React from "react";
 import { TiTick } from "react-icons/ti";
+import SecondaryTitle from "../text/SecondaryTitle";
 
-function Text({ title, description }) {
+function TextSection({ title, description }) {
   return (
     <>
-      <p className="text-bluish font font-Playfair font-semibold text-2xl">
-        {title}
-      </p>
+      <SecondaryTitle title={title}/>
       <p className="italic text-white">" {description}"</p>
       <div className="flex flex-row items-center gap-4 ">
-        <TiTick className="" />
+        <TiTick />
         <p className="">
           Ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
@@ -22,4 +21,4 @@ function Text({ title, description }) {
   );
 }
 
-export default Text;
+export default TextSection;

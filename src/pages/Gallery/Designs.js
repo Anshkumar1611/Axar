@@ -1,18 +1,18 @@
 import React from "react";
-import Images from "../assets/img";
-import Hero from "../components/common/Hero";
-import InclusionSection from "../components/common/inclusion/InclusionSection";
-import ThickLine from "../components/common/lines/ThickLine";
-import SubTitle from "../components/common/SubTitle";
+import Images from "../../assets/img";
+import Hero from "../../components/common/Hero";
+import ThickLine from "../../components/common/lines/ThickLine";
+import SubTitle from "../../components/common/SubTitle";
+import HouseVideos from "./galleryComponents/HouseVideos";
 
-function Inclusion() {
+function Designs() {
   return (
     <div>
       <Hero
-        homeImage={Images.inclusionHome}
-        image={Images.inclusionMain}
-        title={"Inclusion"}
-        subTitle={"Inclusion"}
+        homeImage={Images.hero4}
+        image={Images.videoMain}
+        title={"Designs"}
+        subTitle={"Designs"}
         description1={
           "There are four key features of inclusion which can be used to set expectations and evaluate inclusive practice in schools and early learning and childcare settings. These are present, participating, achieving and supported."
         }
@@ -23,9 +23,11 @@ function Inclusion() {
       <div>
         <div className="mx-4 my-14 lg:mx-28 lg:my-14 ">
           <div className="flex flex-col gap-6">
-            <SubTitle text={"Benefits You Get "} />
+            <SubTitle text={"Design Gallery"} />
             <ThickLine />
-            <InclusionSection />
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
+              <HouseVideos />
+            </div>
           </div>
         </div>
       </div>
@@ -33,4 +35,4 @@ function Inclusion() {
   );
 }
 
-export default Inclusion;
+export default Designs;

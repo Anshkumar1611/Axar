@@ -121,28 +121,25 @@ function Navbar() {
                   </a>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <a
-                        href="/"
+                      <Link to='/gallery/images'
                         className="bg-base-100 hover:text-base-content"
                       >
                         Images
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link to='/gallery/videos'
                         className="bg-base-100 hover:text-base-content"
                       >
                         Videos
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link to='/gallery/designs'
                         className="bg-base-100 hover:text-base-content"
                       >
                         Designs
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
@@ -217,8 +214,7 @@ function Navbar() {
                 </Link>
               </li>
               <li tabIndex={0}>
-                <a
-                  href="/"
+                <Link to="/"
                   className="bg-opacity-0 justify-between hover:text-base-content"
                 >
                   Gallery
@@ -231,31 +227,28 @@ function Navbar() {
                   >
                     <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                   </svg>
-                </a>
+                </Link>
                 <ul className="p-2  bg-base-100 ">
                   <li>
-                    <a
-                      href="/"
+                    <Link to='/gallery/images'
                       className="bg-opacity-0 hover:text-base-content"
                     >
                       Images
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
+                    <Link to='/gallery/videos'
                       className="bg-opacity-0 hover:text-base-content"
                     >
                       Videos
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/"
+                    <Link to='/gallery/designs'
                       className="bg-opacity-0 hover:text-base-content"
                     >
                       Designs
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
