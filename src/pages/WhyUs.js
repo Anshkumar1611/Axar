@@ -4,10 +4,19 @@ import WhyUsSection from "../components/common/whyUsDiv/WhyUsSection";
 import ThickLine from "../components/common/lines/ThickLine";
 import Images from "../assets/img";
 import Hero from "../components/common/Hero";
+import { motion } from "framer-motion";
+
+const imageVariant = {
+  hidden: { y: 100 },
+  visible: {
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
 
 function WhyUs() {
   return (
-    <div className="">
+    <div className="bg-neutral-focus">
       <Hero
         homeImage={Images.whyUs2}
         image={Images.whyUs3}
@@ -19,14 +28,21 @@ function WhyUs() {
         description2={
           "To make the process easier for you, we reached out to our previous customers, our tenants, and members of the community and asked them what qualities of our operation lead them to want to do business with us"
         }
-      
       />
 
-      <div className="mx-4 my-14 lg:mx-28 lg:my-14 ">
+      <div className="px-4 py-14 lg:px-28 lg:py-14 ">
         <div className="flex flex-col gap-6">
           <SubTitle text={"Reasons for Choosing Us"} />
           <ThickLine />
-          <WhyUsSection />
+          <motion.div
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          
+            >
+            <WhyUsSection />
+          </motion.div>
         </div>
       </div>
     </div>

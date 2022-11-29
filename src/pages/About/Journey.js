@@ -3,10 +3,37 @@ import Images from "../../assets/img";
 import SubTitle from "../../components/common/SubTitle";
 import Title from "../../components/common/Title";
 import AxarCard from "../../components/common/cards/AxarCard";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { motion } from "framer-motion";
+
+const containerVariant = {
+  hidden: { opacity: 0, y: 200 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
+
+const imageVariant = {
+  hidden: { x: 200 },
+  visible: {
+    x: 0,
+    transition: { duration: 1 },
+  },
+};
+const textVariant = {
+  hidden: { x: -200 },
+  visible: {
+    x: 0,
+    transition: { duration: 1 },
+  },
+};
 
 function Journey() {
   return (
-    <>
+    <div className="bg-neutral-focus">
       {/* <div
         style={{
           backgroundImage: `url(${Images.inclusionHome})`,
@@ -25,9 +52,21 @@ function Journey() {
             <SubTitle text={"Journey"} />
           </div>
         </div>
-        <div className="lg:px-28 lg:py-4 flex flex-col items-center lg:flex-row lg:justify-center">
-          <div className="bg-journey w-full lg:w-[600px] ">
-            <div className="flex flex-col gap-4 p-8 text-black lg:p-10">
+        <motion.div
+          className="lg:px-28 lg:py-4 flex flex-col items-center lg:flex-row lg:justify-center"
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div className="bg-journey w-full lg:w-[600px] ">
+            <motion.div
+              className="flex flex-col gap-4 p-8 text-black lg:p-10"
+              variants={containerVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               <p className="uppercase font-Playfair text-lg font-medium leading-tight">
                 EST 1997
               </p>
@@ -47,17 +86,40 @@ function Journey() {
                 company was doing really well until that unfortunate day when he
                 met with a fatal accident and we lost him.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="lg:-mt-20">
-            <img src={Images.home} alt="Hero" className="w-[800px] h-[600px]" />
+            <LazyLoadImage
+              alt="Hero"
+              src={Images.home}
+              effect="blur"
+              className="w-[800px] h-[600px]"
+            />
           </div>
-        </div>
-        <div className="flex flex-col py-14 lg:px-28 lg:py-20 lg:flex-row">
-          <div className="flex justify-center ">
+        </motion.div>
+        <motion.div
+          className="flex flex-col py-14 lg:px-28 lg:py-20 lg:flex-row"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ when: "beforeChildren" }}
+        >
+          <motion.div
+            className="flex justify-center "
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <AxarCard />
-          </div>
-          <div className="flex justify-center items-center p-4">
+          </motion.div>
+          <motion.div
+            className="flex justify-center items-center p-4"
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <p className="text-justify text-white font-Playfair">
               AXAR LUXURY HOMES is an extension of my brother’s dream, it’s my
               tribute to my late brother. He was the one who inspired me to be a
@@ -67,14 +129,32 @@ function Journey() {
               from him. Following his footsteps, I studied Diploma of civil
               engineering from Government Polytechnic, Ahmedabad.
             </p>
-          </div>
-        </div>
-        <div className="flex flex-col lg:px-28 lg:py-20 lg:flex-row-reverse">
-          <div className="flex justify-center ">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="flex flex-col lg:px-28 lg:py-20 lg:flex-row-reverse"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ when: "beforeChildren" }}
+        >
+          <motion.div
+            className="flex justify-center "
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <AxarCard />
-          </div>
+          </motion.div>
           <div className="flex justify-center items-center p-4">
-            <p className="text-justify text-white font-Playfair">
+            <motion.p
+              className="text-justify text-white font-Playfair"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               And then subsequently Bachelor of Civil Engineering from Gujarat’s
               most reputed L D Engineering Institute Ahmedabad. I passed my
               Engineering with flying colours and achieved 7 gold medals. My
@@ -85,11 +165,11 @@ function Journey() {
               chartered civil engineer. This is my little story. DREAMS DO COME
               TRUE. Building your dream home and helping you bring your dreams
               to reality is my passion.
-            </p>
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 }
 

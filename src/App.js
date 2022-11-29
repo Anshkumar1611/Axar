@@ -14,7 +14,10 @@ import SmoothScroll from './components/SmoothScroll';
 import Videos from "./pages/Gallery/Videos";
 import Designs from "./pages/Gallery/Designs";
 import GalleryImages from "./pages/Gallery/GalleryImages";
-
+import Faq from "./pages/Faq";
+import TermsConditions from "./pages/TermsConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ScrollButton from './components/common/buttons/ScrollButton';
 
 function App() {
   return (
@@ -33,7 +36,11 @@ function App() {
         <Route path="/gallery/videos" element={<Videos />} />
         <Route path="/gallery/designs" element={<Designs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/terms&conditions" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
+      <ScrollButton />
       </SmoothScroll>
       <Footer />
     </BrowserRouter>

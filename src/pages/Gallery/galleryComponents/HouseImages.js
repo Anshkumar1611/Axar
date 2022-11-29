@@ -18,7 +18,11 @@ function HouseImages() {
       {projects.map((item, index) => {
         return (
           <div key={index} className="w-full h-full">
-            <Photo url={item.photo} title={item.title} className="w-full h-full" />
+            <Photo
+              url={item.photo}
+              title={item.title}
+              className="w-full h-full"
+            />
           </div>
         );
       })}

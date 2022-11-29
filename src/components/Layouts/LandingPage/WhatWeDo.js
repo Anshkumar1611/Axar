@@ -3,6 +3,25 @@ import Images from "../../../assets/img";
 import SubTitle from "../../common/SubTitle";
 import Title from "../../common/Title";
 import Rectangular from "../../common/buttons/Rectangular";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { motion } from "framer-motion";
+
+const imageVariant = {
+  hidden: { y: 100 },
+  visible: {
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
+
+const textVariant = {
+  hidden: { y: 100 },
+  visible: {
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
 
 function WhatWeDo() {
   return (
@@ -17,10 +36,27 @@ function WhatWeDo() {
           </div>
         </div>
         <div className="flex flex-col gap-4 px-4 lg:gap-10 lg:flex-row lg:px-28">
-          <div className="w-full h-full lg:w-1/2">
-            <img src={Images.hero4} alt={Images.hero5} className='border-8 border-white'/>
-          </div>
-          <div className="w-full h-full lg:w-1/2 flex flex-col gap-4 ">
+          <motion.div
+            className="w-full h-full lg:w-1/2"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <LazyLoadImage
+              alt={Images.hero5}
+              src={Images.hero4}
+              effect="blur"
+              className="border-8 border-white"
+            />
+          </motion.div>
+          <motion.div
+            className="w-full h-full lg:w-1/2 flex flex-col gap-4 "
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -40,8 +76,8 @@ function WhatWeDo() {
               proident, sunt in culpa qui officia deserunt mollit anim id est
               laborum.
             </p>
-            <Rectangular text={"Learn More"} />
-          </div>
+            <Rectangular text={"Learn More"} path={"/services"} />
+          </motion.div>
         </div>
       </div>
     </div>

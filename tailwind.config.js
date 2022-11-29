@@ -15,7 +15,8 @@ module.exports = {
     fontFamily: {
       raleway: ["Raleway", "sans-serif"],
       sans: ["Open Sans", "sans-serif"],
-      Playfair:['Playfair Display','serif']
+      Playfair:['Playfair Display','serif'],
+      poppins:[' "Poppins", sans-serif']
     },
   },
 

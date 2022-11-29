@@ -1,7 +1,8 @@
 import React from "react";
 import Rectangular from "../../common/buttons/Rectangular";
-import ThinLine from '../../common/lines/ThinLine'
-// Import Swiper React components
+import ThinLine from "../../common/lines/ThinLine";
+
+//================================================= Import Swiper React components=============================================//
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -12,7 +13,11 @@ import "swiper/css/navigation";
 import "./Style.css";
 
 // import required modules
-import { Pagination, Navigation, EffectFade, Autoplay } from "swiper";
+import {  Navigation, EffectFade, Autoplay } from "swiper";
+
+// ==============================================================================================================================//
+
+
 const data = [
   {
     id: "01",
@@ -59,14 +64,14 @@ function WhyUs() {
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 8000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay,Pagination, Navigation,EffectFade]}
+        // pagination={{
+        //   clickable: false,
+        // }}
+        navigation={false}
+        modules={[Autoplay, Navigation, EffectFade]}
         className="mySwiper swiperWhy"
       >
         {data.map((item) => {
@@ -77,7 +82,9 @@ function WhyUs() {
                 <ThinLine />
                 <p className="text-5xl text-yellow">{item.Reason}</p>
                 <p className="text-lg font-semibold">{item.description}</p>
-                <div className="pb-10"><Rectangular text={"Know More"} /></div>
+                <div className="pb-10">
+                  <Rectangular text={"Know More"} path={"/whyUS"} />
+                </div>
               </div>
             </SwiperSlide>
           );

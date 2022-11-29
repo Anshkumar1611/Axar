@@ -47,6 +47,14 @@ const Images = {
   videoMain:require("./gallery/images/video.jpg"),
   contactUs:require("./contactus.jpeg"),
   aboutHome:require("./about/about.jpg"),
+  teamHero:require("./team/team.jpg"),
+  teamMember:require("./team/profile-1.jpg"),
+  faqHero:require("./footer/faqHero.jpg"),
+  faqMain:require("./footer/faq.jpg"),
+  termHero:require("./footer/heroTerm.jpg"),
+  termMain:require("./footer/mainTerm.jpg"),
+  privacyHero:require("./footer/privacyHero.jpg"),
+  privacyMain:require("./footer/privacyMain.jpg"),
 };
 
 export default Images;

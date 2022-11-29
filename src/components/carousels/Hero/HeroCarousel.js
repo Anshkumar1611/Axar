@@ -21,7 +21,7 @@ function HeroCarousel() {
           delay: 8000,
           disableOnInteraction: false,
         }}
-        navigation={true}
+        navigation={false}
         pagination={false}
         modules={[Autoplay, Navigation,EffectFade,Pagination]}
         effect='fade'

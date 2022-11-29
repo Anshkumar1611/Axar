@@ -5,8 +5,11 @@ import Title from "../../common/Title";
 
 function OurProjects() {
   return (
-    <div className="londa" style={{backgroundImage: "url(../../../assets/img/hero-image.jpg)"}}>
-      <div className="py-14">
+    <div
+      className="bg-neutral-focus"
+
+    >
+      <div className="py-14 bg-[rgba(0, 0, 0, 0.6)]">
         <div className="flex flex-col gap-4 px-4 lg:px-28 ">
           <div>
             <Title text={"Projects"} />

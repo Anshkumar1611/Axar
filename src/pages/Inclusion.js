@@ -5,9 +5,10 @@ import InclusionSection from "../components/common/inclusion/InclusionSection";
 import ThickLine from "../components/common/lines/ThickLine";
 import SubTitle from "../components/common/SubTitle";
 
+
 function Inclusion() {
   return (
-    <div>
+    <div className="bg-neutral-focus">
       <Hero
         homeImage={Images.inclusionHome}
         image={Images.inclusionMain}
@@ -21,7 +22,7 @@ function Inclusion() {
         }
       />
       <div>
-        <div className="mx-4 my-14 lg:mx-28 lg:my-14 ">
+        <div className="px-4 py-14 lg:px-28 lg:py-14 ">
           <div className="flex flex-col gap-6">
             <SubTitle text={"Benefits You Get "} />
             <ThickLine />

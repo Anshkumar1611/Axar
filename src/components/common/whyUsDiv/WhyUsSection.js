@@ -54,9 +54,12 @@ function WhyUsSection() {
       {data.map((item) => {
         const { heading, url, description, id } = item;
         return (
-          <div className="flex flex-col lg:flex-row mb-4 drop-shadow-2xl even:flex-row-reverse" key={id}>
+          <div
+            className="flex flex-col lg:flex-row mb-4 drop-shadow-2xl lg:even:flex-row-reverse even:flex-col"
+            key={id}
+          >
             <PhotoDiv url={url} />
-            <TextDiv heading={heading} desc={description} id={id}/>
+            <TextDiv heading={heading} desc={description} id={id} />
           </div>
         );
       })}

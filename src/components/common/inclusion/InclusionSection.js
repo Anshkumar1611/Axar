@@ -3,6 +3,16 @@ import Images from "../../../assets/img";
 import SecondaryTitle from "../text/SecondaryTitle";
 import Photo from "../whyUsDiv/photoDiv/Photo";
 import InclusionText from "./InclusionText";
+import { motion } from "framer-motion";
+
+const textVariant = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity:  1,
+    scale: 1,
+    transition: { duration: 0.8 },
+  },
+};
 
 const data = [
   {
@@ -85,7 +95,13 @@ function InclusionSection() {
             <div className="flex-1">
               <Photo url={item.image} />
             </div>
-            <div className="flex-1 flex flex-col justify-center gap-4">
+            <motion.div
+              className="flex-1 flex flex-col justify-center gap-4"
+              variants={textVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               <div>
                 <SecondaryTitle title={item.secondaryTitle} />
               </div>
@@ -98,7 +114,7 @@ function InclusionSection() {
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
           </div>
         );
       })}

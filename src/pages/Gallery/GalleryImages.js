@@ -4,10 +4,19 @@ import Hero from "../../components/common/Hero";
 import ThickLine from "../../components/common/lines/ThickLine";
 import SubTitle from "../../components/common/SubTitle";
 import HouseImages from "./galleryComponents/HouseImages";
+import { motion } from "framer-motion";
+
+const imageVariant = {
+  hidden: { y: 100 },
+  visible: {
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
 
 function GalleryImages() {
   return (
-    <div>
+    <div className="bg-neutral-focus">
       <Hero
         homeImage={Images.galleryImage}
         image={Images.galleryImageMain}
@@ -21,13 +30,17 @@ function GalleryImages() {
         }
       />
       <div>
-        <div className="mx-4 my-14 lg:mx-28 lg:my-14 ">
+        <div className="px-4 py-14 lg:px-28 lg:py-14 ">
           <div className="flex flex-col gap-6">
             <SubTitle text={"Gallery Images"} />
             <ThickLine />
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <motion.div className="grid grid-cols-1 gap-6 md:grid-cols-2"
+            variants={imageVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}>
               <HouseImages />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

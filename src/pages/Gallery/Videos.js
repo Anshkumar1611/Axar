@@ -7,7 +7,7 @@ import HouseVideos from "./galleryComponents/HouseVideos";
 
 function Videos() {
   return (
-    <div>
+    <div className="bg-neutral-focus">
       <Hero
         homeImage={Images.hero4}
         image={Images.videoMain}
@@ -21,11 +21,11 @@ function Videos() {
         }
       />
       <div>
-        <div className="mx-4 my-14 lg:mx-28 lg:my-14 ">
+        <div className="px-4 py-14 lg:px-28 lg:py-14 ">
           <div className="flex flex-col gap-6">
             <SubTitle text={"Videos Gallery"} />
             <ThickLine />
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 pt-6">
               <HouseVideos />
             </div>
           </div>
