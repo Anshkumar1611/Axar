@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Normal from "../common/buttons/Normal";
 import { motion } from "framer-motion";
 import RenderAlert from "./RenderAlert";
+import emailjs from '@emailjs/browser';
 
 const buttonVariant = {
   hidden: { x: -100 },
@@ -30,25 +31,21 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // emailjs.send()
-    // .then(response=>{
-    //   console.log('SUCCESS!',response);
-    //   setValues({
-    //     fullName: "",
-    //     email: "",
-    //     subject: "",
-    //     message: "",
-    //   })
+    emailjs.send('service_3pciq1g', 'template_oaxm8xv',values,'VBBXPf8H8n1FEXT4H')
+    .then(response=>{
+      console.log('SUCCESS!',response);
+    setValues({
+      fullName: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
     setStatus("SUCCESS");
-    // },error=>{
-    //   console.log('FAILED...',error);
-    // })
+    },error=>{
+      console.log('FAILED...',error);
+    })
   };
-  if (values === "") {
-    // setTimeout(()=>{
-    //   setStatus('')
-    // },4000)
-  }
+
   useEffect(() => {
     if (status === "SUCCESS") {
       setTimeout(() => {
@@ -83,6 +80,7 @@ function ContactForm() {
               type="text"
               placeholder="Name"
               name="fullName"
+              value={values.fullName}
               required
               onChange={handleChange}
               className="input w-full lg:mb-8"
@@ -103,6 +101,7 @@ function ContactForm() {
               type="email"
               placeholder="Email"
               name="email"
+              value={values.email}
               required
               onChange={handleChange}
               className="input w-full mb-8"
@@ -123,6 +122,7 @@ function ContactForm() {
           <input
             type="text"
             name="subject"
+            value={values.subject}
             required
             placeholder="subject"
             onChange={handleChange}
@@ -145,6 +145,7 @@ function ContactForm() {
             name="message"
             placeholder="Message"
             required
+            value={values.message}
             onChange={handleChange}
           ></textarea>
         </div>
