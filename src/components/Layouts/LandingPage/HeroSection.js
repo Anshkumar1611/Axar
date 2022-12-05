@@ -63,7 +63,7 @@ function HeroSection({ scrollRef }) {
           initial={{ y: 750 }}
           animate="visible"
         >
-          <p className="text-center font-sans">
+          <p className="text-center font-sans font-semibold text-lg">
             AXAR Luxury Homes is a custom home design and build firm that
             specializes in creating unique, customized homes in South-East
             Queensland, Australia.

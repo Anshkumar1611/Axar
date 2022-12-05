@@ -18,15 +18,15 @@ function About() {
   return (
     <motion.div
       id="about"
-      className="lg:h-screen"
+      className="lg:h-screen "
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="bg-base-200 lg:mx-24 rounded-lg">
+      <div className="bg-base-200 lg:mx-24 rounded-lg lg:pb-14">
         <div className="flex justify-center">
-          <div className="flex flex-col lg:flex-row gap-10 p-10 lg:gap-32">
+          <div className="flex flex-col lg:flex-row gap-10 p-14 lg:gap-32">
             <div className="flex flex-row gap-10 justify-between lg:gap-32">
               <div className="flex flex-row gap-2">
                 <div>
@@ -80,7 +80,7 @@ function About() {
             />
           </div>
           <div className="lg:basis-1/2 py-4 text-white lg:p-0 lg:px-4">
-            <p className="font-sans italic">
+            <p className="font-sans italic text-justify">
               " Our number one goal is to make your building experience a
               positive one! With our open and easy build process, it is simple
               to achieve your dream! With our extensive experience in designing

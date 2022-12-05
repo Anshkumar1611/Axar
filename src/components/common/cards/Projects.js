@@ -62,16 +62,16 @@ function Projects() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="relative h-80 w-96">
+        <div className="relative h-96 w-96">
           <div className="opacity-100 h-full w-full">
             <LazyLoadImage
               alt="Images"
               src={item.photo}
               effect="blur"
-              className="bg-cover bg-center h-full w-full "
+              className="bg-cover bg-center h-80 w-full "
             />
           </div>
-          <div className="opacity-100 absolute inset-x-0 bottom-0  backdrop-opacity-40 hover:backdrop-opacity-50 backdrop-invert cursor-pointer">
+          <div className="opacity-100 absolute inset-x-0 bottom-16  backdrop-opacity-40 hover:backdrop-opacity-50 backdrop-invert cursor-pointer">
             <div className="flex justify-between px-5 py-5">
               <div className="font-semibold text-white  flex flex-col">
                 <p>{item.name}</p>

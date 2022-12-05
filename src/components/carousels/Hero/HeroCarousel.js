@@ -18,7 +18,7 @@ function HeroCarousel() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 8000,
+          delay: 18000,
           disableOnInteraction: false,
         }}
         navigation={false}
