@@ -48,11 +48,13 @@ function WhyUsSection() {
               className="h-full"
             />
           </motion.div>
-          <motion.div className="lg:w-7/12 h-full pt-8 bg-base-100"
-          variants={carouselVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}>
+          <motion.div
+            className="lg:w-7/12 h-full pt-8 bg-base-100"
+            variants={carouselVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <WhyUs />
           </motion.div>
         </div>

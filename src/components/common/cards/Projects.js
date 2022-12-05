@@ -54,13 +54,14 @@ const data = [
 ];
 
 function Projects() {
-  return data.map((item) => {
+  return data.map((item, index) => {
     return (
       <motion.div
         variants={containerVariant}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        key={index}
       >
         <div className="relative h-96 w-96">
           <div className="opacity-100 h-full w-full">

@@ -67,7 +67,7 @@ function ContactForm() {
         <div className="flex flex-col gap-14 lg:flex-row justify-between">
           <div className="flex flex-col w-full h-full">
             <motion.label
-              for="name"
+              htmlFor="name"
               className="text-black mb-3 font-semibold"
               variants={labelVariant}
               initial="hidden"
@@ -88,7 +88,7 @@ function ContactForm() {
           </div>
           <div className="flex flex-col w-full h-full">
             <motion.label
-              for="name"
+              htmlFor="name"
               className="text-black mb-3 -mt-3 lg:mt-0 font-semibold"
               variants={labelVariant}
               initial="hidden"
@@ -110,7 +110,7 @@ function ContactForm() {
         </div>
         <div className="flex flex-col w-full h-full">
           <motion.label
-            for="name"
+            htmlFor="name"
             className="text-black mb-3 font-semibold"
             variants={labelVariant}
             initial="hidden"
@@ -131,7 +131,7 @@ function ContactForm() {
         </div>
         <div className="flex flex-col">
           <motion.label
-            for="name"
+            htmlFor="name"
             className="text-black mb-3 font-semibold"
             variants={labelVariant}
             initial="hidden"

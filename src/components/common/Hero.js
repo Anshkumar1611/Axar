@@ -41,11 +41,8 @@ function Hero({
       <div
         style={{
           backgroundImage: `url(${homeImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
         }}
-        className="w-full h-80"
+        className="w-full h-80 bg-cover lg:bg-center bg-no-repeat"
       ></div>
       <div className=" px-4 lg:px-28 bg-white py-14">
         <motion.div
@@ -89,7 +86,7 @@ function Hero({
             variants={imageVariant}
             initial="hidden"
             animate="visible"
-            whileHover={{ rotate: [0, 360]}}
+            whileHover={{ rotate: [0, 360] }}
             viewport={{ once: true }}
           >
             <LazyLoadImage

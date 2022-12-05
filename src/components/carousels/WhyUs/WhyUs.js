@@ -74,9 +74,9 @@ function WhyUs() {
         modules={[Autoplay, Navigation, EffectFade]}
         className="mySwiper swiperWhy"
       >
-        {data.map((item) => {
+        {data.map((item,index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <div className="flex flex-col items-center  gap-4 justify-center w-full h-full px-12  lg:px-24 bg-base-100 ">
                 <p className="font-bold text-4xl text-white">{item.id}</p>
                 <ThinLine />

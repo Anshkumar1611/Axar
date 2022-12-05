@@ -1,6 +1,5 @@
 import React from "react";
-import { CiLocationOn } from "react-icons/ci";
-import { TfiEmail } from "react-icons/tfi";
+import { TfiEmail,TfiLocationPin } from "react-icons/tfi";
 import { BsPhone } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -13,7 +12,7 @@ const imageVariant = {
 };
 const data = [
   {
-    icon: <CiLocationOn />,
+    icon: <TfiLocationPin />,
     title: "Location:",
     subTitle: "11 PLUM PL, ROCHEDALE,QLD 4123",
   },
@@ -63,7 +62,7 @@ function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56588.551388946755!2d153.119612!3d-27.569199!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915cad43bb2973%3A0xc48452a87add2221!2s11%20Plum%20Pl%2C%20Rochedale%20QLD%204123%2C%20Australia!5e0!3m2!1sen!2sus!4v1669366442461!5m2!1sen!2sus"
             width="100%"
             height="290px"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Map"

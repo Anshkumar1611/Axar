@@ -24,6 +24,19 @@ const data = [
   },
 ];
 
+const usefulLinks = [
+  { path: "/", name: "Home" },
+  { path: "/whyUs", name: "Why Choose Us" },
+  { path: "/services", name: "Services" },
+  { path: "/inclusion", name: "Inclusion" },
+];
+
+const helpLinks = [
+  { path: "/faq", name: "Faq" },
+  { path: "/terms&conditions", name: "Terms & Conditions" },
+  { path: "/privacy", name: "Privacy" },
+];
+
 function Footer() {
   return (
     <div className="border-t-2">
@@ -44,61 +57,42 @@ function Footer() {
         </div>
         <div>
           <span className="footer-title text-lg opacity-100">Useful Links</span>
-          <Link
-            to="/"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            Home
-          </Link>
-          <Link
-            to="/whyUs"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            Why Choose Us
-          </Link>
-          <Link
-            to="/services"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            Services
-          </Link>
-          <Link
-            to="/inclusion"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            Inclusion
-          </Link>
+          {usefulLinks.map((item, index) => {
+            return (
+              <Link
+                to={item.path}
+                className="link link-hover text-primary hover:text-base-content"
+                key={index}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
         <div>
           <span className="footer-title text-lg opacity-100">Help</span>
-          <Link
-            to="/faq"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            FAQ
-          </Link>
-          <Link
-            to="/terms&conditions"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            Terms & Conditions
-          </Link>
-          <Link
-            to="/privacy"
-            className="link link-hover text-primary hover:text-base-content"
-          >
-            Privacy
-          </Link>
+          {helpLinks.map((item, index) => {
+            return (
+              <Link
+                to={item.path}
+                className="link link-hover text-primary hover:text-base-content"
+                key={index}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
         <div>
           <span className="footer-title text-lg opacity-100">
             Team Solutions
           </span>
           <div className="flex flex-row gap-4">
-            {data.map((item) => {
+            {data.map((item, index) => {
               return (
                 <motion.div
                   className="flex justify-center items-center w-12 h-12 text-white border-2 rounded-full hover:bg-yellow hover:text-white text-2xl"
+                  key={index}
                   variants={imageVariant}
                   initial="hidden"
                   whileInView="visible"

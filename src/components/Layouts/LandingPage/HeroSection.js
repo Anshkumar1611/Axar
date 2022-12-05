@@ -70,9 +70,11 @@ function HeroSection({ scrollRef }) {
           </p>
         </motion.div>
         <div>
-          <button onClick={() => scrollBottom(scrollRef)}>
-            <Normal text={"Get Started"} />
-          </button>
+          <Normal
+            text={"Get Started"}
+            scrollBottom={scrollBottom}
+            scrollRef={scrollRef}
+          />
         </div>
       </motion.div>
     </div>
