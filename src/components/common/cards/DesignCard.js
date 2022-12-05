@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegHeart } from "react-icons/fa";
+// import { FaRegHeart } from "react-icons/fa";
 import { BiBed, BiBath } from "react-icons/bi";
 import { TbSquareRotated } from "react-icons/tb";
 import { AiOutlineHome } from "react-icons/ai";
@@ -239,7 +239,7 @@ function DesignCard() {
               <h2 className="card-title text-violet-500 font-semibold">
                 ${price}
                 <p className="text-sm text-white"> / Only</p>
-                <FaRegHeart />
+                {/* <FaRegHeart /> */}
               </h2>
 
               <h2 className="card-title">{city}</h2>

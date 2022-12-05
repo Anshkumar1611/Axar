@@ -5,18 +5,15 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
 
-const imageVariant = {
+const containerVariant = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
+    // scale: 1,
+    // transition: { duration: 1 },
   },
 };
-const textVariant = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-  },
-};
+
 const data = [
   {
     name: "Metro",
@@ -59,29 +56,22 @@ const data = [
 function Projects() {
   return data.map((item) => {
     return (
-      <div className="">
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <div className="relative h-80 w-96">
-          <motion.div
-            className="opacity-100 h-full w-full"
-            variants={imageVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <div className="opacity-100 h-full w-full">
             <LazyLoadImage
               alt="Images"
               src={item.photo}
               effect="blur"
               className="bg-cover bg-center h-full w-full "
             />
-          </motion.div>
-          <motion.div
-            className="opacity-100 absolute inset-x-0 bottom-0  backdrop-opacity-40 hover:backdrop-opacity-50 backdrop-invert cursor-pointer"
-            variants={textVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          </div>
+          <div className="opacity-100 absolute inset-x-0 bottom-0  backdrop-opacity-40 hover:backdrop-opacity-50 backdrop-invert cursor-pointer">
             <div className="flex justify-between px-5 py-5">
               <div className="font-semibold text-white  flex flex-col">
                 <p>{item.name}</p>
@@ -92,9 +82,9 @@ function Projects() {
                 <BiBuildingHouse />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </motion.div>
     );
   });
 }

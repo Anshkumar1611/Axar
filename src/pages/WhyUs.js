@@ -23,7 +23,7 @@ function WhyUs() {
         title={"Why Us"}
         subTitle={"Why Choose Us"}
         description1={
-          " When choosing a contractor to help you in building your dream home, constructing your business location, or remodeling your existing home, there are a plethora of different qualities to consider as you weigh the pros and cons.  "
+          "When choosing a contractor to help you in building your dream home, constructing your business location, or remodeling your existing home, there are a plethora of different qualities to consider as you weigh the pros and cons."
         }
         description2={
           "To make the process easier for you, we reached out to our previous customers, our tenants, and members of the community and asked them what qualities of our operation lead them to want to do business with us"
@@ -39,8 +39,7 @@ function WhyUs() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          
-            >
+          >
             <WhyUsSection />
           </motion.div>
         </div>

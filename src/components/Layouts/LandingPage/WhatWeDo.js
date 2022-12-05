@@ -11,7 +11,7 @@ const imageVariant = {
   hidden: { y: 100 },
   visible: {
     y: 0,
-    transition: { duration: 1 },
+    transition: { delay: 0.5, duration: 0.5 },
   },
 };
 
@@ -19,7 +19,7 @@ const textVariant = {
   hidden: { y: 100 },
   visible: {
     y: 0,
-    transition: { duration: 1 },
+    transition: { delay: 0.5, duration: 0.5 },
   },
 };
 

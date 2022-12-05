@@ -10,7 +10,7 @@ const textVariant = {
   visible: {
     opacity:  1,
     scale: 1,
-    transition: { duration: 0.8 },
+    transition: { duration: 0.5 },
   },
 };
 
