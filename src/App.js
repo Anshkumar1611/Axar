@@ -39,7 +39,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/terms&conditions" element={<TermsConditions />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="/*" element={<Navigate replace to="/" />} />
         </Routes>
         <ScrollButton />
       </SmoothScroll>
